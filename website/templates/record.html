@@ -9,12 +9,13 @@
       <h5 class="card-title">{{customer_record.address}} ,{{customer_record.state}} ,{{customer_record.city}} - {{customer_record.zipcode}}</h5>
       <p class="card-text">Email: {{customer_record.email}} </p>
       <p class="card-text">Phone: {{customer_record.phone}}</p>
-      <a href="{% url 'home' %}" class="btn btn-outline-danger">Delete</a>
+      <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-outline-danger">Delete</a>
     </div>
   </div>
   <p class="">Record Created At: {{customer_record.created_at}}</p>
 </br>
 <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+<a href="{% url 'update_record' customer_record.id%}" class="btn btn-secondary">Update Record</a>
 
 
     
